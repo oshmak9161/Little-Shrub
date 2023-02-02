@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/icon.ico">
+        <title>Lucky Shrub</title>
+    </head>
+    <body>
+        <header>           
+                <img id="logo" src="images/Lucky_Shrub-removebg-preview.png" alt="logo">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><span class="material-symbols-outlined">
+                    home
+                    </span></a></li>
+                <li><a href="garden.html"><span class="material-symbols-outlined">
+                    yard
+                    </span></a></li>
+                
+                <li class="active"><a href="contact.html"><span class="material-symbols-outlined">
+                    contact_support
+                    </span></a></li>
+
+                <li><a href="aboutus.html"><span class="material-symbols-outlined">
+                    group
+                    </span></a></li>
+            </ul>
+        </nav>
+        <main>
+            
+            <div class="section-header">
+                <h3>Contact Form</h3>
+                <p>Swing by or leave us a message!</p>
+            </div>
+
+            <section class="row">
+                <article>
+                    <img src="images/Contact-Page-Image-1.jpg" alto="arizona" class="contact-img">
+                </article>
+
+                <article style="width: 50vw;">
+                    <form method="post" class="form">
+
+                        <div>
+                            <label for="name">Name</label><br>
+                            <input type="text" id="name" name="name" required minlength="2" maxlength="30">
+                         </div>
+                         <div>
+                            <label for="email">Email</label><br>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone</label><br>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div>
+                            <label for="request">Subject</label><br>
+                            <textarea class="full" id="request" name="request" placeholder="Please tell us what you need..." required minlength="3" maxlength="200"></textarea>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="optin" name="optin">
+                            <label for="optin">May we send you newsletters?</label>
+                        </div>
+                        <div id="btn-container">
+                            <button class="submit" type="submit">Send</button>
+                        </div>
+                        
+                    </form>
+                </article>
+            </section>
+
+            
+        </main>
+        <footer>
+            <div class="footer-logo">
+                <img src="images/Asset 3@3x.png" alt="footer-logo">
+            </div>
+            <div class="footer-content">
+                <p>&copy; Lucky Shrub</p>
+            </div>
+        </footer>
+    </body>
+</html>

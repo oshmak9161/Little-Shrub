@@ -1,0 +1,599 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+   --primary-color: #00C853;
+   --secondary-color: rgb(63, 44, 10);
+   --tertiary-color: #1b5e20;
+   --accent-color: #e57373;
+   --background-color:#272727;
+   --tab-color:#555555;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: cursive;
+}
+
+h1{
+    color:var(--background-color);
+    font-size: 2rem;
+    margin-left: 8px;
+    margin-top: 8px;
+    opacity: 1;
+    text-shadow: 1px 1px 5px black, 0 0 1em greenyellow, 0 0 1.5em green;
+}
+
+h2{
+    color: floralwhite;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin: 32px 32px;
+    padding: 12px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(167, 168, 168), 0 0 1em rgb(2, 255, 15), 0 0 5em rgb(222, 243, 37);
+}
+
+h3{
+    font-size: 1.5rem;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+
+/*
+* HEADER
+*/
+header{
+    background-image: url('images/garden-g68ff019e5_1920.jpg');
+    background-size: cover; 
+    left: 0;
+    padding-bottom: 16px;
+    top: 0;
+    width:100%;
+}
+
+header > img {
+    background-color: white;
+    border-radius: 150px;
+    display: block;
+    height: 300px;
+    margin: 0 auto;
+    opacity: 0.5;
+    width: 300px;
+}
+
+header > img:hover{
+    transform: rotateY(720deg);
+    transition: 1.5s;
+}
+
+/*
+* NAV
+*/
+
+nav ul {
+    display: flex;
+    text-align: center;
+    width: 100%;
+}
+
+li {
+    background-color: var(--tab-color);
+    border: none;
+    border-end-end-radius: 30px;
+    border-end-start-radius: 30px;
+    cursor: pointer;
+    float: left;
+    font-size: 17px;
+    list-style: none;
+	padding-top: 14px;
+    padding-bottom: 14px;
+	width: 25%;
+}
+
+
+
+nav li:hover{
+    background-color: var(--primary-color);
+}
+
+nav li::after{
+    background-color: var(--tertiary-color);
+}
+
+nav li:focus{
+    outline: none;
+}
+
+nav .active{
+    background-color: var(--tertiary-color);
+}
+
+li > a {
+    color:floralwhite; 
+}
+
+
+
+/*
+* MAIN
+*/
+section {
+    align-items: center;
+    color: floralwhite;
+    display: flex;
+    flex-direction:row;
+    gap:16px;
+    padding: 32px 32px;
+}
+
+.promotion{
+    background-image: url('images/hydroponics.jpg');
+    background-size: cover;
+    border-radius: 15px;
+    height: 300px;
+    width: 100%;
+}
+
+.white-bg{
+    background-color: black;
+    color:white;
+    height: 150px;
+    margin-top: 75px;
+    opacity: 0.5;
+    overflow: hidden;
+    text-align: center;
+}
+
+.white-bg > p {
+    color: floralwhite;
+    font-weight: 600;
+}
+
+.card{
+    height: 430px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+}
+
+.card > p::first-letter {
+    color:var(--accent-color);
+    font-family: 'Tangerine';
+    font-size:32px;
+}
+
+.card > p {
+    overflow: hidden;
+    padding: 8px;
+}
+
+
+
+
+.svg-container{
+    bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, calc(100vw / 2));;
+    height: 100px;
+    width: 100vw;
+}
+
+#svg-lg{
+    display: block;
+}
+
+/*
+* Seedling Animation
+*/
+.seedling {
+    height: 70px;
+    margin-left: 40px;
+    margin-top: 15px;
+    width: 70px;
+}
+
+.stalk{
+    animation: grow 5s ease normal infinite;
+    fill: none;
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+}
+
+.leaf{
+    animation: moveLeaves 5s ease normal infinite;
+}
+
+.top-leaf{
+    animation: moveLeavesFaster 5s ease normal infinite;
+}
+
+.long-stalk{
+    animation: growSeventy 5s ease normal infinite;
+    fill: none;
+    stroke-dasharray: 70;
+    stroke-dashoffset: 70;
+}
+
+@keyframes grow {
+    from {
+        stroke-dashoffset: 40;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes growSeventy {
+    from {
+        stroke-dashoffset: 70;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes moveLeaves {
+    from{
+        transform: translate3d(0, -5px, 0);
+    }
+    to {
+        transform: translate3d(0, -40px, 0);
+    }
+}
+
+@keyframes moveLeavesFaster {
+    from{
+        transform: translate3d(0, -5px, 0);
+    }
+    to {
+        transform: translate3d(0, -70px, 0);
+    }
+}
+
+
+/*
+* FOOTER
+*/
+footer{
+    position: relative;
+    background-color: var(--secondary-color);
+    display: flex;
+    height: 65px;
+    width: 100%;
+    z-index: 2;
+}
+
+footer div{
+    flex: 1;
+}
+
+footer img {
+    height: 60px;
+    opacity: 0.5;
+    width: 30px;
+}
+
+.footer-logo{
+    text-align: center;
+}
+
+.footer-content{
+    text-align: center;
+}
+
+.footer-content > p{
+    color:floralwhite;
+    display: block;
+    margin-top: 18px;
+    opacity: 0.5;
+}
+
+/*
+* GARDEN PAGE
+*/
+.tomato{
+    animation: spin 1.5s linear;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    height: 30px;
+    margin-left: 8px;
+    margin-top: 8px;
+    width:30px;
+}
+
+.tomato-container{
+    animation: moveSideway 15s linear;
+    animation-direction: forwards;
+    animation-iteration-count: infinite;
+    z-index: 5;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+@keyframes moveSideway {
+    from{
+        transform: translate3d(calc(50% - 17px), 0, 0);
+    }
+    to{
+        transform: translate3d(calc(50% - 17px), 2200px, 0);
+    }
+}
+
+.timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::after {
+    background-color: green;
+    bottom: 0;
+    content: '';
+    left: 50%;
+    margin-left: -3px;
+    position: absolute;
+    top: 0;
+    width: 6px;
+}
+
+.container {
+    background-color: inherit;
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+.container::after {
+    background-color: white;
+    content: '';
+    border: 4px solid green;
+    border-radius: 50%;
+    height: 25px;
+    position: absolute;
+    right: -17px;
+    top: 15px;
+    width: 25px;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.left::before {
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+}
+
+.right {
+    left: 50%;
+}
+
+.right::before {
+    content: " ";
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    height: 0;
+    left: 30px;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.content {
+    background-color: white;
+    border-radius: 6px;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.content > img {
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+
+    .timeline::after {
+        left: 31px;
+    }
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    .left::after, .right::after {
+        left: 15px;
+    }
+
+    .right {
+        left: 0%;
+    }
+}
+
+
+/*
+* CONTACT US PAGE - FORM
+*/
+
+.section-header{
+    color: floralwhite;
+    margin-top: 32px;
+    text-align: center;
+}
+
+.form{
+    color:floralwhite;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    margin-top: 32px;
+    width: 100%;
+}
+
+input[type="text"], input[type="number"], 
+input[type="tel"],input[type="email"] {
+    color: floralwhite;
+    background-color:var(--tab-color); 
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 8px 0;
+    padding: 12px 20px;
+    width: 100%;
+}
+
+.full {
+    background-color:var(--tab-color); 
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: floralwhite;
+    height: 150px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding: 12px 20px;
+    resize: none;
+    width: 100%;
+}
+
+#btn-container {
+    margin-top:32px;
+    text-align: center;
+    width: 100%;
+}
+
+.submit {
+	background-color: orange;
+	border: none;
+    border-radius: 15px;
+	color: floralwhite;
+	padding: 10px 16px;
+    width: 30%;
+}
+
+#optin{
+    margin-right: 16px;
+    text-align: left;
+}
+
+.contact-img{
+    width: 50vw;
+}
+
+
+.img-container{
+    text-align: center;
+}
+
+.img-container img {
+    border-radius: 50%;
+    height: 100px;
+    width: 50vw;
+}
+
+
+/*
+* ABOUT US PAGE
+*/
+
+.aboutus-container{
+    padding: 32px 16px;
+    width: 100%;
+}
+
+.profile-container{
+    align-items: center;
+    color: floralwhite;
+    display: grid;
+    gap:18px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    height: 30%;
+    text-align: center;
+    width: 100%;
+}
+
+.profile-container:nth-child(even) .about-right:last-child {
+    order:-1;
+}
+
+#corporate-logo{
+    width: 100px;
+}
+
+.avatar{
+    border-radius: 50%;
+    height:250px;
+    width:250px;
+}
+
+@media screen and (max-width: 480px) {
+    section{
+        flex-direction:column; 
+    }
+    .svg-container{
+        grid-template-columns: none;
+    }
+    
+    .svg-std {
+        width: 100vw;
+    }
+
+    #svg-lg{
+        display: none;
+    }
+
+    .profile-container{
+        margin-bottom: 32px;
+    }
+    .profile-container:nth-child(even) .about-right:last-child {
+        order:1;
+    }
+
+    @keyframes moveSideway {
+        from{
+            transform: translate3d(17px, 0, 0);
+        }
+        to{
+            transform: translate3d(17px, 1700px, 0);
+        }
+    }
+}
